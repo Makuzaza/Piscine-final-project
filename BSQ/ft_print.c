@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: makuznet <makuznet@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/24 16:55:20 by makuznet          #+#    #+#             */
+/*   Updated: 2024/09/24 16:55:48 by makuznet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "BSQ.h"
 
-void		ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void		ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	int i;
 
@@ -17,10 +29,10 @@ void		ft_putstr(char *str)
 		}
 }
 
-void		ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-	int i;
-	char array[10];
+	int		i;
+	char	array[10];
 
 	i = 0;
 	if (nb < 0)
