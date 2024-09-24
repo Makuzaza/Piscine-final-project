@@ -6,7 +6,7 @@
 /*   By: makuznet <makuznet@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:52:31 by makuznet          #+#    #+#             */
-/*   Updated: 2024/09/24 16:53:52 by makuznet         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:14:53 by makuznet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	ft_get_char_void(char *argv)
 	while (read(fd, &buf[i], 1))
 	{
 		if (buf[i] == '\n')
-			break;
+			break ;
 		i++;
 	}
 	v = buf[i - 3];
@@ -49,7 +49,7 @@ char	ft_get_char_obst(char *argv)
 	while (read(fd, &buf[i], 1))
 	{
 		if (buf[i] == '\n')
-			break;
+			break ;
 		i++;
 	}
 	o = buf[i - 2];
@@ -72,7 +72,7 @@ char	ft_get_char_full(char *argv)
 	while (read(fd, &buf[i], 1))
 	{
 		if (buf[i] == '\n')
-			break;
+			break ;
 		i++;
 	}
 	p = buf[i - 1];

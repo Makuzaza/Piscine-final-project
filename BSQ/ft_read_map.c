@@ -6,7 +6,7 @@
 /*   By: makuznet <makuznet@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:55:54 by makuznet          #+#    #+#             */
-/*   Updated: 2024/09/24 16:57:26 by makuznet         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:21:41 by makuznet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_get_number_lines(char *argv)
 	while (read(fd, &buf[i], 1))
 	{
 		if (buf[i] > 58 || buf[i] < 47)
-			break;
+			break ;
 		nb_l = nb_l * 10 + (buf[i] - 48);
 		i++;
 	}
@@ -68,12 +68,12 @@ int	ft_get_number_columns(char *argv)
 	while (read(fd, &buf[j], 1))
 	{
 		if (buf[j] == '\n')
-			 break;
+			break ;
 		j++;
 	}
-   free (buf);
-   close(fd);
-   return (j + 1);
+	free (buf);
+	close(fd);
+	return (j + 1);
 }
 
 void	ft_get_second_line(int fd)
@@ -83,11 +83,11 @@ void	ft_get_second_line(int fd)
 
 	i = 0;
 	if ((buf = malloc(4096 *sizeof(char))) == NULL)
-		return;
+		return ;
 	while (read(fd, &buf[i], 1))
 	{
 		if (buf[i] == '\n')
-			break;
+			break ;
 		i++;
 	}
 }
@@ -108,18 +108,18 @@ char	**ft_read_file(char *argv)
 	fd = open(argv, O_RDONLY);
 	ft_get_second_line(fd);
 	if ((buf = malloc(l * sizeof(char*))) == NULL)
-		return NULL;
+		return (NULL);
 	while (i < l)
 	{
 		if ((buf[i] = malloc(c * sizeof(char))) == NULL)
-			return NULL;
+			return (NULL);
 		i++;
 	}
 	i = 0;
 	while (i < l)
 	{
 		if ((ret = read(fd, buf[i], c)) == - 1)
-			return NULL;
+			return (NULL);
 		buf[i++][c - 1] = '\0';
 	}
 	close (fd);

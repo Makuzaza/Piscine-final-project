@@ -6,7 +6,7 @@
 /*   By: makuznet <makuznet@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:54:06 by makuznet          #+#    #+#             */
-/*   Updated: 2024/09/24 16:55:15 by makuznet         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:19:21 by makuznet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ft_print_solution(int i, char **argv)
 	close (fd);
 }
 
-int	main(int argc, char ** argv)
+int	main(int argc, char **argv)
 {
 	int	i;
 

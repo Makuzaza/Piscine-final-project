@@ -6,7 +6,7 @@
 /*   By: makuznet <makuznet@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:55:20 by makuznet          #+#    #+#             */
-/*   Updated: 2024/09/24 16:55:48 by makuznet         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:18:28 by makuznet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
-		{
-			ft_putchar(str[i]);
-			i++;
-		}
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }
 
 void	ft_putnbr(int nb)
@@ -36,23 +36,23 @@ void	ft_putnbr(int nb)
 
 	i = 0;
 	if (nb < 0)
-		{
-			ft_putchar('-');
-			nb = -nb;
-		}
+	{
+		ft_putchar('-');
+		nb = -nb;
+	}
 	if (nb == 0)
-		{
-			ft_putchar(48);
-		}
+	{
+		ft_putchar(48);
+	}
 	while (nb > 0)
-		{
-			array[i] = nb % 10;
-			i++;
-			nb /= 10;
-		}
+	{
+		array[i] = nb % 10;
+		i++;
+		nb /= 10;
+	}
 	while (i > 0)
-		{
-			i--;
-			ft_putchar(array[i] + 48);
-		}
+	{
+		i--;
+		ft_putchar(array[i] + 48);
+	}
 }
